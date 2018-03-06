@@ -92,4 +92,30 @@ void List::remove(int k)
 	}
 	
 	//Implementations of missing operations
+	oid List::clear()
+	{
+		while(num_elements > 0)
+		remove(1);
+	}
 	
+int List::get(int k)
+	{
+		if(k == 1)
+		{
+		return frontPtr -> data;
+	}
+		else
+		{
+			Node* tmpPtr = frontPtr;
+	  int loc = 1; 
+	  
+	    while( loc != k-1) //get pointer to (k-1)th node
+	     {
+		tmpPtr = tmpPtr->link;
+		loc++;
+	     }
+	
+	 return tmpPtr -> data;
+        }//end else
+	     
+	}
