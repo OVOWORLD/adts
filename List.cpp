@@ -92,7 +92,7 @@ void List::remove(int k)
 	}
 	
 	//Implementations of missing operations
-	oid List::clear()
+	void List::clear()
 	{
 		while(num_elements > 0)
 		remove(1);
